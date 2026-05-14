@@ -86,6 +86,6 @@ A scalable Hybrid Data Warehouse model that supports analytical reporting and bu
 ---
 
 # 👩‍💻 Author
-SARA OTHMAN
-TASNEEM ASHOUR
-BERLANTI MASALHA
+- SARA OTHMAN
+- TASNEEM ASHOUR
+- BERLANTI MASALHA
