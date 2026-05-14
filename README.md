@@ -80,7 +80,5 @@ The Data Warehouse supports analysis such as:
 # 🚀 Project Outcome
 This project demonstrates how transactional data can be transformed into a structured analytical system that supports reporting, business intelligence, and data-driven decision making.
 
----
 
-# 👩‍💻 Author
-Movie Rental Data Warehouse & ETL Project
+سشقش 
