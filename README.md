@@ -1,98 +1,86 @@
-# Lavender Sweet 🍫
+# 🎬 Movie Rental Data Warehouse
 
-**Lavender Sweet** is an elegant and user-friendly e-commerce website for selling chocolate products, built with **HTML, CSS, PHP, and MySQL**.
+## 📖 Overview
+This project presents the design and implementation of a **Data Warehouse** for a Movie Rental business based on an existing OLTP database schema.
 
----
+The original OLTP system is designed for day-to-day transactions such as:
+- Managing customers
+- Processing rentals and payments
+- Handling film inventory
+- Managing stores and staff
 
-## 🖼 Project Screenshots
-
-### 🏠 Home Page
-The main landing page of Lavender Sweet showcasing featured products and promotions.
-![Home Page](Home.png.png)
-
-### ℹ️ About Page
-Learn more about the brand and the story behind Lavender Sweet.
-![About Page](about-photo.jpg.png)
-
-### 🍫 Product Page
-View product details, images, prices, and add items to the cart.
-![Product Page](product-details.png.png)
-
-### 🛒 Cart Page
-Manage your selected products before checkout, view totals, and update quantities.
-![Cart Page](cart.png.png)
-
-### 💳 Checkout Page
-Enter your shipping information and complete the purchase process.
-![Checkout Page](checkout.png.png)
-
-### ✅ Order Success
-Confirmation page displayed after successfully placing an order.
-![Order Success](order_success.png.png)
-
-### 👤 Signup & Login
-User authentication pages for signing up or logging into the website.
-![Signup Page &  Login Page ](signup&login.png.png)
-
-
-### 🛠 Admin Control Panel
-Manage products, edit details, or remove items from the store.
-![Control Panel](Control Panel.png.png)
-
-## 🗂 Project Structure
-
-- **PHP Pages:** All backend functionality (cart, checkout, products, user profiles, etc.)
-- **CSS Files:** Styling for pages and components
-- **Images:** Stored in the project folder
-- **Database:** `lavender.sql` (contains all tables and sample data)
+To support analytical reporting and business intelligence, the operational data was transformed into a **Dimensional Data Warehouse Model** using ETL processes.
 
 ---
 
-## 🚀 How to Run
-
-1. Place the project folder inside `htdocs` (XAMPP)
-2. Start **Apache** & **MySQL** in XAMPP
-3. Import `lavender.sql` using **phpMyAdmin**
-4. Open your browser and go to:  
-
----
-
-## 📦 Features
-
-- View chocolate products with details and images
-- Add products to cart and manage orders
-- User authentication (signup/login/logout)
-- Checkout system with order confirmation
-- Admin control panel for managing products
-- Responsive and clean design
+# 🎯 Project Objectives
+- Analyze the OLTP movie rental schema
+- Design a scalable **Star Schema**
+- Create fact and dimension tables
+- Build ETL pipelines using Python
+- Support analytical queries and reporting
 
 ---
 
-## 🖋 Author
+# 🏗️ Data Warehouse Architecture
 
-**Sara Othman Shehadi**
+## ⭐ Fact Tables
+- `fact_rental_film`
+- `fact_rental_customer`
+- `fact_payment`
 
----
+## 🧩 Dimension Tables
+- `dim_customer`
+- `dim_film`
+- `dim_category`
+- `dim_store`
+- `dim_staff`
+- `dim_date`
 
-## 🔗 About
-
-An e-commerce platform designed to showcase the **Lavender Sweet** brand, with a focus on simplicity, elegance, and ease of use.
-
----
-
-## ⚙️ Technologies Used
-
-- **Frontend:** HTML, CSS  
-- **Backend:** PHP  
-- **Database:** MySQL
-
----
-
-## 📂 Resources
-
-- `README.md` – project overview  
-- `lavender.sql` – database file  
-- Images – product and UI images  
+## 🔗 Bridge Table
+- `bridge_film_category`
 
 ---
 
+# ⚙️ ETL Pipeline
+
+The ETL process was developed using **Python**, `Pandas`, and `SQLAlchemy`.
+
+### 🔹 Extract
+Data is extracted from the Sakila OLTP database.
+
+### 🔹 Transform
+Data is cleaned, merged, transformed, and organized into dimensional structures.
+
+### 🔹 Load
+Processed data is loaded into the Data Warehouse tables in MySQL.
+
+---
+
+# 🛠️ Technologies Used
+- Python
+- Pandas
+- SQLAlchemy
+- MySQL
+- Dimensional Modeling
+- ETL Processes
+
+---
+
+# 📊 Business Analysis Capabilities
+The Data Warehouse supports analysis such as:
+- Rental trends over time
+- Revenue analysis
+- Customer behavior insights
+- Film popularity tracking
+- Store performance evaluation
+
+---
+
+# 🚀 Project Outcome
+This project demonstrates how transactional data can be transformed into a structured analytical system that supports reporting, business intelligence, and data-driven decision making.
+
+---
+
+# 👩‍💻 Author
+Movie Rental Data Warehouse & ETL Project
